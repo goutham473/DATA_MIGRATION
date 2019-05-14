@@ -1,0 +1,33 @@
+{
+  "dataPipeLineProperties": {
+    "tablesInfo": [
+      {
+        "dpl.customers_parqt": {
+          "backup_Table": "dpl.customers_parqt_bkp",
+          "history_Table": "dpl.customers_h",
+          "Key_Columns": [
+            "customer_Id"
+          ],
+          "sequence_Id_Column": "customer_seq_Id"
+        },
+        "dpl.order_items_parqt": {
+          "backup_Table": "dpl.order_items_parqt_bkp",
+          "history_Table": "dpl.order_items_h",
+          "Key_Columns": [
+            "order_item_id"
+          ],
+          "sequence_Id_Column": "order_items_seq_id"
+        },
+        "dpl.categories_parqt": {
+          "backup_Table": "dpl.categories_parqt_bkp",
+          "history_Table": "dpl.categories_h",
+          "Key_Columns": [
+            "category_id"
+          ],
+          "sequence_Id_Column": "categories_seq_Id"
+        }
+      }
+    ],
+    "status_table": "dpl.etl_stats"
+  }
+}

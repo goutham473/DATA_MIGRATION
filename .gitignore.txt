@@ -1,0 +1,8 @@
+target/classes/
+target/generated-sources/
+*.xml
+*.log
+*.iws
+*.iml
+*.ipr
+*.idea/
