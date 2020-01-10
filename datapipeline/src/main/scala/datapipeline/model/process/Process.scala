@@ -3,17 +3,16 @@ package datapipeline.model.process
 import datapipeline.model.read.Read
 import datapipeline.model.write.Write
 import datapipeline.util.Driver
-import org.apache.spark.sql.functions.{col, current_timestamp, lit}
+import org.apache.spark.sql.functions.{col, current_timestamp, lit, _}
 import org.apache.spark.sql.types._
 import org.apache.spark.sql.{DataFrame, Row, SparkSession}
-import org.apache.spark.sql.functions._
-
 import org.apache.spark.storage.StorageLevel.MEMORY_AND_DISK
 
 case class Etl_stats(pre_count: Long, delta_count: Long, post_counts: Long, inserted_counts: Long,updated_counts: Long, deleted_counts: Long, last_modified_by: String)
 
 object Process {
 
+  //test
   def invokeDataLoading(driver: Driver)(sparkSession: SparkSession) {
     val statsTableDf = loadTable(driver.dataPipeLineProps.statusTable)(sparkSession).persist(MEMORY_AND_DISK)
 
